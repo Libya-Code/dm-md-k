@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سورة</title>
+    <link rel="stylesheet" href="styl.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+   
+</head>
+
+<body dir="rtl">
+    <h1 id="surah-content"></h1>
+    <p>هنا سيتم عرض نص السورة المختارة من القرآن الكريم.</p>
+    <div>
+        <span id="Interpretation_Quranic_verse">تفسير</span>
+        <span onclick="Interpretation_Quranic_verse()" id="Reading_Quranic_verse">قراءة</span>
+
+    </div>
+    <hr>
+    <!-- جزء العرض  سور و تفسير -->
+    <div>
+                <div class="sura-conten">
+                    <span onclick="outlined()"  id="material-symbols-outlined"> استمع ▶</span>
+                    
+            <div id="sura-content1">
+
+            </div>
+        </div>
+        <div id="nldjjln">
+
+        </div>
+        <div id="audio-quran">
+
+        </div>
+    </div>
+    <div id="sura-audio">
+                       <span onclick="outlined()"  id="material-symbols-outlined"> استمع ▶</span>
+                    </div>
+    <footer>
+        <p>&copy; 2024 موقع قرآن الكريم. جميع الحقوق محفوظة.</p>
+</body>
+<script src="script.js"></script>
+
+</html>

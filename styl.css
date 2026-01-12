@@ -1,0 +1,239 @@
+/* 
+ليتم تحريك العنصر من موقعه الأصلي إلى موقع جديد باستخدام إزاحة محددة على المحورين السيني والصادي.
+transform: translate(x,y);
+تحريك العنصر 100 بكسل على المحور السيني (الأفقي).
+transform: translateX(100px);
+تحرك عنصر علي محور صادي
+transform: translatey(100px);
+تكبر العنصر
+transform: scale(2)
+
+
+
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@100..900&display=swap');
+
+body{
+    background-color: #202125;
+    color: white;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: center;
+    padding: 0;
+}
+
+#header{
+    background-color: #202125;
+    padding: 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 93%;
+    position: fixed;
+    top: 0;
+    left: 2%;
+    right: 3%;
+    z-index: 1000;
+   
+}
+
+#header2{
+    background-color: #202125;
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    right: 0;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: none;
+}
+#header3{
+    margin: 10px;
+    padding: 15px 20px 10px 20px;
+    background-color: #33383f;
+    border-radius: 10px;
+    position: fixed;
+    left: 50%;
+        
+}
+img{
+    width: 100px;
+    height: 60px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    position: absolute;
+    right: 0px;
+}
+#header3:hover{
+    background-color: #2BA4AC;
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+#language-select{
+    margin: 10px;
+    padding: 10px 20px;
+    width: 90%;
+    background-color: #33383f;
+    border-radius: 10px;
+    color: white;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    font-optical-sizing: auto;
+    
+}
+option{
+    background-color: #202125;
+    color: white;
+    font-family: "Noto Kufi Arabic", sans-serif;
+    font-optical-sizing: auto;
+    border-radius: 10px;
+}
+ul{
+    margin-left: 10px;
+    text-align: right;
+}
+li{
+    list-style: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+li:hover{
+    background-color: #383737;
+}
+
+#content{
+    border-radius: 10px;
+    text-align: center;
+    display: flex;        /* يخلي العناصر جنب بعض */
+    flex-wrap: wrap;     /* يخلي الديفات تنزل تحت بعض لما المساحة تخلص */
+    gap: 10px;            /* مسافة بين الديفات */
+    justify-content: center;  /* يخلي الديفات في النص */
+    
+}
+#quran-text{
+    width: 200px;
+    height: auto;
+    background-color: #202125;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#quran-text:hover{
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border: 0.1px solid #2BA4AC;
+    color: #2BA4AC;
+    h2{
+        color: #ffffff;
+    };
+    
+}
+#ayah-text , #ayah-text1{
+    display: inline-block;
+    background-color: #202125;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.3);
+    cursor: pointer;
+}
+#result{
+    text-align: right;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #33383f;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+#quran-Search-ayah{
+    margin-top: 10px;
+    text-align: right;
+    background-color: #202125;
+    border-radius: 10px;
+    padding: 10px;
+    
+}
+
+#sura-content1{
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align:center;
+    transition: all 0.3s ease;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Amiri Quran', serif;
+    font-size: 28px;
+    line-height: 2;
+}
+.sura-conten{
+    font-size: 30px;
+    color: #ffffff;
+    cursor: pointer;
+    font-family: 'Amiri Quran', serif;
+    font-size: 28px;
+    line-height: 2;
+    
+}
+.sura-content1:hover{
+        color: #52b5f7;
+    }
+.material-symbols-outlined {
+    
+    cursor: pointer;
+    font-size: 100px; 
+    color: #149eb1;
+    transform: scale(1);
+}
+svg{
+    cursor: pointer;
+}
+#Content-of-random-Quranic{
+    margin: 0;
+}
+#Reading_Quranic_verse , #Interpretation_Quranic_verse{
+    margin-right: 100px;
+    margin-left: 100px;
+    cursor: pointer;
+    
+}
+#ayah-text1{
+    width: 80%;
+}
+#material-symbols-outlined{
+    font-family: "Noto Kufi Arabic", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 20px;
+}
+#material-symbols-outlined:hover{
+    color: #52b5f7;
+    border: #149eb1 0.1px solid;
+    border-radius: 5px;
+}
+h1{
+    margin: 0;
+}
+#sura-audio{
+    background-color: rgb(255, 255, 0);
+    width: 100%;
+    height: auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 0;
+    padding: 10px;
+    box-shadow: 0 0px 50px #33383f;
+}
