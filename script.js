@@ -276,3 +276,45 @@ document.getElementById("menu").addEventListener("click", function () {
     document.getElementById("header2").style.display = "none"
   })
 })
+//===========================
+// صفحة اسماء الله الحسنى
+// ==========================
+if (document.getElementById("names-alhusnaa")) {
+  fetch("https://islamicapi.com/api/v1/asma-ul-husna/?language=ar&api_key=lxVXkJYLLSqVufMNqarlFHZyvJMZpTg0YzLumWrQdwkRtec4")
+  .then(res => res.json())
+  .then(res => {
+    let x = res.data
+    for (const element of x.names) {
+      document.getElementById("names-alhusnaa").innerHTML +=`
+        <div class="name-alhusnaa-box">
+    <div class="name-header">
+      <span class="name-title">${element.number}  -   ${element.name}</span>
+      <span class="name-title">${element.transliteration}</span>
+      <button class="audio-btn" onclick="playAudio('${element.audio}')">
+        ▶
+      </button>
+    </div>
+
+    <div class="name-meaning">
+      ${element.meaning}
+    </div>
+      <div id="audio">
+    
+    </div>
+  </div>
+      `
+    }
+    
+  })
+}
+ function playAudio(audio){
+  
+  let o = document.getElementById("audio").innerHTML =""
+  const a = document.createElement("audio");
+  a.src = `https://islamicapi.com${audio}`;
+  a.play()
+
+ }
+function languageChanged(value) {
+    console.log("تم اختيار اللغة:", value);
+}

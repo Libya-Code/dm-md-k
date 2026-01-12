@@ -347,3 +347,71 @@ h1{
     color: #ffffff;
     margin-bottom: 10px;
 }
+/* 
+==============================
+صفحة اسماء الله الحسنى
+==============================
+*/
+#names-alhusnaa {
+  display: fixed;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 26px;
+  padding: 12px;
+}
+
+/* البوكس */
+.name-alhusnaa-box {
+  background: #202125;
+  border-radius: 16px;
+  margin: 12px;
+  padding: 16px;
+  box-shadow: 0 0px 18px rgb(0, 0, 0);
+  transition: 0.3s;
+}
+
+/* هيدر الاسم */
+.name-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+/* اسم الله */
+.name-title {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* زر الصوت */
+.audio-btn {
+  border: none;
+  background: #149eb1;
+  color: #fff;
+  font-size: 14px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.audio-btn:hover {
+  background: #149eb1;
+}
+
+/* المعنى */
+.name-meaning {
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.7;
+}
+
+/* تأثير */
+.name-alhusnaa-box:hover {
+  transform: translateY(-4px);
+}
+hr{
+    border: 0.1px solid #33383f;
+}
