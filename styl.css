@@ -31,7 +31,7 @@ body{
     background-color: #202125;
     padding: 0;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px #000000d3;
     width: 93%;
     position: fixed;
     top: 0;
@@ -107,6 +107,12 @@ option{
     font-optical-sizing: auto;
     border-radius: 10px;
 }
+#nav-links{
+    position: flex;
+    overflow: scroll;
+    height: 410px;
+    
+}
 ul{
     margin-left: 10px;
     text-align: right;
@@ -119,7 +125,10 @@ li{
 li:hover{
     background-color: #383737;
 }
-
+a{
+    text-decoration: none;
+    color: white;
+}
 #content{
     border-radius: 10px;
     text-align: center;
@@ -251,4 +260,90 @@ h1{
     bottom: 0;
     padding: 10px;
     box-shadow: 0 0px 50px #33383f;
+}
+/* 
+==============================
+صفحة الحفظ
+==============================
+*/
+/* جزء الحفض */
+.saved-ayahs {
+  width: 90%;
+  max-width: 450px;
+  margin: 30px auto;
+  background: linear-gradient(145deg, #202125, #333);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  font-family: "Arial", sans-serif;
+   color: #fff;
+}
+
+.saved-ayahs h3 {
+  text-align: center;
+  color: #149eb1;
+  margin-bottom: 15px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.ayah {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #33383f;
+  border-radius: 10px;
+  padding: 12px 15px;
+  margin-bottom: 12px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+   color: #fff;
+ 
+}
+
+.ayah:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.ayah span {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.buttons button {
+  background-color: #33383f;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: 8px;
+  padding: 6px 8px;
+  border-radius: 6px;
+  transition: all 0.2s;
+   color: #fff;
+}
+
+
+.buttons button.listen:hover {
+  background-color: #149eb1;
+  color: #fff;
+}
+
+.buttons button.delete {
+  color: #e72914;
+}
+
+.buttons button.delete:hover {
+  background-color: #e0240f;
+  color: #fff;
+}
+.text-ayah-div{
+    overflow: hidden;
+}
+#text-ayah{
+    font-family: 'Amiri Quran', serif;
+    font-size: 24px;
+    line-height: 2;
+    color: #ffffff;
+    margin-bottom: 10px;
 }
