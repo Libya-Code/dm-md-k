@@ -119,18 +119,20 @@ if (document.getElementById("content")) {
 // صفحه الرائسيه : اية عشوائيه 
 //=======================
 if (document.getElementById("ayah-text")) {
+  
   fetch("https://api.qurani.ai/gw/qh/v1/ayah/random/quran-uthmani", {
     method: "GET"
   })
     .then(res => res.json())
     .then(data => {
+      
       document.getElementById("Content-of-random-Quranic").innerText += `ايه قرانيه عشوائيه`
       document.getElementById("Contains-indirect-information").innerText = `${data.data.text}`
 
     })
     .catch(error => {
-      console.log(error);
-
+      document.getElementById("ayah-text1").innerHTML ="حدث خطاء"
+      alert(error)
     })
 }
 
