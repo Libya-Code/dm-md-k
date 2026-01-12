@@ -25,7 +25,7 @@
 
 
 function quran() {
-  axios.get('http://api.alquran.cloud/v1/surah')
+  axios.get('https://api.alquran.cloud/v1/surah')
     .then((response) => {
 
       let x = response.data
@@ -95,7 +95,7 @@ function toArabicNumbers(number) {
 // =========================
 if (document.getElementById("content")) {
 
-  let url = "http://api.alquran.cloud/v1/surah";
+  let url = "https://api.alquran.cloud/v1/surah";
 
   axios.get(url)
     .then((response) => {
@@ -144,7 +144,7 @@ function Interpretation_Quranic_verse() {
     var surahNumber = params.get("surah");
 
     if (surahNumber) {
-      fetch(`http://api.alquran.cloud/v1/surah/${surahNumber}`)
+      fetch(`https://api.alquran.cloud/v1/surah/${surahNumber}`)
         .then(res => res.json())
         .then(data => {
           const surah = data.data;
@@ -206,7 +206,7 @@ if (document.getElementById("surah-content")) {
   var surahNumber = params.get("surah");
 
   if (surahNumber) {
-    fetch(`http://api.alquran.cloud/v1/surah/${surahNumber}`)
+    fetch(`https://api.alquran.cloud/v1/surah/${surahNumber}`)
       .then(res => res.json())
       .then(data => {
         const surah = data.data;
